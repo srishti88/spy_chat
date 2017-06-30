@@ -15,7 +15,13 @@ def start_chat():
         spy_details  = [spy_salutation,spy_name,spy_age,spy_rating,spy_status]
         return spy_details
     elif default.upper() == "N":
-        spy_details = [ask_name(),ask_salutation(),ask_age(),ask_rating(),ask_status()]
+        spy_salutation = str(ask_salutation())
+        spy_name = str(ask_name())
+        spy_age = str(ask_age())
+        spy_rating = str(ask_rating())
+        spy_status = str(ask_status())
+        spy_details = [spy_salutation, spy_name, spy_age, spy_rating, spy_status]
+        # spy_details = [ask_name(),ask_salutation(),ask_age(),ask_rating(),ask_status()]
         return spy_details
     else:
         print "Not a valid option"
@@ -23,9 +29,8 @@ def start_chat():
 
 
 def display(spy_details):
-    print("Welcome " + spy_details[0] + spy_details[1] + " you are " + spy_details[2] + " years old " + " you are rated as " + spy_details[3])
+    print("Welcome " + spy_details[0] + spy_details[1] + " you are " + spy_details[2] + " years old " + " you are rated as " + spy_details[3] + "and your current status is " + spy_details[4])
+display(start_chat())
 user_choice = menu()
 if user_choice == 1:
     status_choice = raw_input("Do you want to choose a new status/older status: ")
-display(start_chat())
-

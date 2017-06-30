@@ -3,5 +3,5 @@ default_user = {
     'age' :'34',
     'salutation' : 'Mr',
     'rating' : 'a good spy',
-    'status' : 'online'
+    'status' : 'We are one'
 }

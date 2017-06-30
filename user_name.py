@@ -2,7 +2,7 @@ def ask_name():
     spy_name = raw_input("Enter your Name")
     if len(spy_name) > 0:
         if spy_name.isalpha(): #str.isalpha(spy_name)
-            return spy_name
+            return str(spy_name)
         else:
             print  ("Please enter a String Value")
             ask_name()

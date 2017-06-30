@@ -4,7 +4,8 @@ from user_rating import *
 friends ={
     'name':["Vineet"],
     'age':["20"],
-    'rating':["A great spy"]
+    'rating':["A great spy"],
+    'chat':["hello"]
     }
 def add_friend():
     add_name = ask_name()
