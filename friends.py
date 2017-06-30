@@ -1,54 +1,27 @@
-friend1 ={
-    'name':'tom',
-    'age':'15',
-    'salutation':'mr'
+from user_name import *
+from user_age import *
+from user_rating import *
+friends ={
+    'name':["Vineet"],
+    'age':["20"],
+    'rating':["A great spy"]
     }
-friend2 ={
-    'name':'jerry',
-    'age':'17',
-    'salutation':'mr'
-    }
-friend3 ={
-    'name':'joey',
-    'age':'13',
-    'salutation':'mr'
-    }
-friend4 ={
-    'name':'erica',
-    'age':'18',
-    'salutation':'miss'
-    }
-friend5 ={
-    'name':'sam',
-    'age':'30',
-    'salutation':'miss'
-    }
-friend6 ={
-    'name':'sia',
-    'age':'45',
-    'salutation':'miss'
-    }
-friend7 ={
-    'name':'drake',
-    'age':'67',
-    'salutation':'55'}
-friend8 ={
-    'name':'lopa',
-    'age':'34',
-    'salutation':'mr'}
-friend9 ={
-    'name':'dekster',
-    'age':'24',
-    'salutation':'mr'}
-friend10 ={
-    'name':'rihanna',
-    'age':'27',
-    'salutation':'miss'
-    }
+def add_friend():
+    add_name = ask_name()
+    add_age = ask_age()
+    add_rating = ask_rating()
+    friends['name'].append(add_name)
+    friends['age'].append(add_age)
+    friends['rating'].append(add_rating)
+    # print(friends)
+# add_friend()
 
-list_of_friends=[friend1,friend2,friend3,friend4,friend5,friend6,friend7,friend8,friend9,friend10]
-for friend in list_of_friends:
+def select_a_friend():
+    for (index,name) in enumerate(friends['name']):
+        print (index + 1,name, friends['age'][index],friends['rating'][index])
+        status_choice = int(raw_input("Choose a friend: "))
+        print friends['name'][status_choice-1],friends['age'][status_choice-1],friends['rating'][status_choice-1]
+# select_a_friend()
 
-    print (friend)
 
 

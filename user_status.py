@@ -1,4 +1,5 @@
 status = ["we are one","i am busy","see you"]
+
 def display_status():
     for (index,stat) in enumerate(status):
         print (index+1 ,status[index])
@@ -9,5 +10,7 @@ def display_status():
 def update_status():
     status_input = raw_input("Please enter a status: ")
     status.append(status_input)
-    display_status()
+    print ("Your status '%s")% status[len(status)-1]
+
 update_status()
+
