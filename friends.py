@@ -20,7 +20,8 @@ def select_a_friend():
     for (index,name) in enumerate(friends['name']):
         print (index + 1,name, friends['age'][index],friends['rating'][index])
         status_choice = int(raw_input("Choose a friend: "))
-        print friends['name'][status_choice-1],friends['age'][status_choice-1],friends['rating'][status_choice-1]
+        return status_choice
+        # print friends['name'][status_choice-1],friends['age'][status_choice-1],friends['rating'][status_choice-1]
 # select_a_friend()
 
 
