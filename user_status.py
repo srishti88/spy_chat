@@ -1,19 +1,13 @@
-def ask_status():
-    spy_status = (raw_input('enter your status : '))
-    if len(spy_status) == 0:
-        print ("please input information")
-        ask_status()
-
-    elif spy_status.isalpha() == False:
-        print ("please input valid information")
-        ask_status()
-    elif spy_status.lower() == 'online':
-        return ('Spy is online ')
-    elif spy_status.lower() == "offline":
-        return ('Spy is offline')
-
-    else:
-        print ("please enter online/offline:")
-        ask_status()
+status = ["we are one","i am busy","see you"]
+def display_status():
+    for (index,stat) in enumerate(status):
+        print (index+1 ,status[index])
+    status_choice = int(raw_input("Choose a status: "))
+    print ("Status choosen by you is:-%s ") %(status[status_choice-1])
 
 
+def update_status():
+    status_input = raw_input("Please enter a status: ")
+    status.append(status_input)
+    display_status()
+update_status()

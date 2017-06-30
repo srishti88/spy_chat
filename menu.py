@@ -6,7 +6,7 @@ def menu():
     print ("4.read chats from the user")
     print ("5.close application")
     user_choice = raw_input("Please select option: ")
+    return user_choice
 
 
-menu()
 

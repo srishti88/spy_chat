@@ -1,5 +1,6 @@
 from user_name import ask_name,ask_salutation
 from spy_details import *
+from menu import *
 from user_age import *
 from user_rating import *
 from user_status import *
@@ -20,8 +21,11 @@ def start_chat():
         print "Not a valid option"
         start_chat()
 
+
 def display(spy_details):
     print("Welcome " + spy_details[0] + spy_details[1] + " you are " + spy_details[2] + " years old " + " you are rated as " + spy_details[3])
-
+user_choice = menu()
+if user_choice == 1:
+    status_choice = raw_input("Do you want to choose a new status/older status: ")
 display(start_chat())
 
