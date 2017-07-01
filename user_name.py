@@ -1,3 +1,4 @@
+#taking input for name
 def ask_name():
     spy_name = raw_input("Enter your Name")
     if len(spy_name) > 0:
@@ -9,9 +10,10 @@ def ask_name():
     else:
         print  ("Name can not be empty")
         ask_name()
+ask_name()
 
 
-
+# asking for salutation
 def ask_salutation():
     spy_salutation = raw_input("enter your salutation.MR/MISS: ")
     if spy_salutation.upper() == "MR":

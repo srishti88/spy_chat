@@ -1,7 +1,9 @@
+import sys
+from termcolor import colored, cprint
 from friends import *
 from datetime import datetime
 from steganography.steganography import Steganography
-
+#using steganography library to encrypt
 def encrypt_message():
     input_image = raw_input("please select an image to encode: ")
     input_message = raw_input("please enter a message you would like to encrypt: ")
@@ -11,15 +13,22 @@ def encrypt_message():
     output = "message encoded"
     print output
 # encrypt_message()
+#stegnography to decrypt message
 def decrypt_message():
     image_path = raw_input("please select a image to decode : ")
-    try:
+    try:    #used exception handaling
         decrypted_message = Steganography.decode(image_path)
-        if "SOS" in decrypted_message.upper():
-            print("Save our souls")
-        elif "SAVE ME" in decrypted_message.upper():
-            print("need immediate help")
-        return decrypted_message
+        text = colored(decrypted_message, 'black')
+        print text
+        if len(decrypted_message) > 100:
+            exit(0)
+        else:
+            number_of_words = len(decrypted_message)
+            if "SOS" in decrypted_message.upper():
+                print("Save our souls")
+            elif "SAVE ME" in decrypted_message.upper():
+                print("need immediate help")
+                return decrypted_message
     except:
         print("image doesnot contain any secert message")
 
@@ -28,8 +37,12 @@ def send_message():
     print ("your message has been successfully send to %s ")%(friends['name'][friend_choice -1])
 def read_chat_history():
     read_for = select_a_friend()
-    for (index,chat) in enumerate(friends['chat']):
+
+
+    for chat in friend.chat:
         print ("Your message is : " + chat)
+        print (colored(friend.name,'red'),colored(chat,'black'),colored(datetime,'blue'))
 
 
-read_chat_history()
+
+

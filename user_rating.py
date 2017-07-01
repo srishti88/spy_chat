@@ -5,7 +5,7 @@ def ask_rating():
         ask_rating()
 
     else:
-        try:
+        try: #using exception handaling
             spy_rating = float(spy_rating)
             if spy_rating > 5 :
                 print ("A spy can not have a rating more than 5")
