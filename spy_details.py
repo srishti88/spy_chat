@@ -1,7 +1,9 @@
-default_user = {
-    'name' : "james",
-    'age' :'34',
-    'salutation' : 'Mr',
-    'rating' : 'a good spy',
-    'status' : 'We are one'
-}
+class spy():
+    def __init__(self,name,age,salutation,rating,status) :
+        self.name = name
+        self.salutation = salutation
+        self.age = age
+        self.rating = rating
+        self.status = status
+default_user = spy('james','40','Mr','4.0','online')
+print default_user.name

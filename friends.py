@@ -1,12 +1,13 @@
 from user_name import *
 from user_age import *
 from user_rating import *
-friends ={
-    'name':["Vineet"],
-    'age':["20"],
-    'rating':["A great spy"],
-    'chat':["hello"]
-    }
+class friends:
+    def __init__(self,name,age,rating,chat) :
+        self.name = name
+        self.age = age
+        self.rating = rating
+        self.chat = chat
+friend = friends('vineet','20','a great spy','hello')
 def add_friend():
     add_name = ask_name()
     add_age = ask_age()

@@ -6,15 +6,18 @@ def encrypt_message():
     input_image = raw_input("please select an image to encode: ")
     input_message = raw_input("please enter a message you would like to encrypt: ")
 
-    friends['chat'].append(input_message + " " + str(datetime.now()))
+    friend.chat.append(input_message + " " + str(datetime.now()))
     out_image = raw_input("plese enter the specific name of the encoded image : ")
     Steganography.encode(input_image,out_image,input_message)
     output = "message encoded"
-    return output
+    print output
 # encrypt_message()
 def decrypt_message():
     image_path = raw_input("please select a image to decode : ")
-    return Steganography.decode(image_path)
+    try:
+        print Steganography.decode(image_path)
+    except:
+        print("image doesnot contain any secert message")
 
 def send_message():
     friend_choice =int( select_a_friend())

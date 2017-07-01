@@ -7,11 +7,11 @@ from user_status import *
 def start_chat():
     default = raw_input("Do you want to continue as a default user. Y/N: ")
     if default.upper() == "Y":
-        spy_salutation = default_user['salutation']
-        spy_name = default_user['name']
-        spy_age = default_user['age']
-        spy_rating = default_user['rating']
-        spy_status = default_user['status']
+        spy_salutation = default_user.salutation
+        spy_name = default_user.name
+        spy_age = default_user.age
+        spy_rating = default_user.rating
+        spy_status = default_user.status
         spy_details  = [spy_salutation,spy_name,spy_age,spy_rating,spy_status]
         return spy_details
     elif default.upper() == "N":
