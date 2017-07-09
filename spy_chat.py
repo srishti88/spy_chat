@@ -33,17 +33,26 @@ def start_chat():  #begenning of the programme
 # to display details of spy
 def display(spy_details):
     print("Welcome " + spy_details[0] + spy_details[1] + " you are " + spy_details[2] + " years old " + " you are rated as " + spy_details[3] + "and your current status is " + spy_details[4])
+
 display(start_chat())
-user_choice = menu()
-if user_choice == 1:
-    ask_status()
-elif user_choice == 2:
-    add_friend()
-elif user_choice ==3:
-    encrypt_message()
-elif user_choice == 4:
-    decrypt_message()
-elif user_choice == 5:
-    read_chat_history()
-else:
-    exit(0)
+
+def run_chat_app():
+    user_choice = menu()
+    if user_choice == 1:
+        ask_status()
+        run_chat_app()
+    elif user_choice == 2:
+        add_friend()
+        run_chat_app()
+    elif user_choice == 3:
+        encrypt_message()
+        run_chat_app()
+    elif user_choice == 4:
+        decrypt_message()
+        run_chat_app()
+    elif user_choice == 5:
+        read_chat_history()
+        run_chat_app()
+    else:
+        exit(0)
+run_chat_app()

@@ -9,8 +9,8 @@ def ask_name():
             ask_name()
     else:
         print  ("Name can not be empty")
-        ask_name()
-ask_name()
+        return ask_name()
+
 
 
 # asking for salutation
@@ -23,7 +23,7 @@ def ask_salutation():
         return ("Miss")
     else:
         print  "Not a valid option"
-        ask_salutation()
+        return ask_salutation()
 
 
 

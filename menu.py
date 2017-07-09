@@ -7,7 +7,10 @@ def menu():
     print ("4.Read chats from the user")
     print ("5.Close application")
     user_choice = raw_input("Please select option: ")
-    return user_choice
+    if len(user_choice) > 0:
+        user_choice = int (user_choice)
+        return user_choice
+
 
 
 

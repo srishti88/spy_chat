@@ -6,4 +6,4 @@ class spy():
         self.rating = rating
         self.status = status
 default_user = spy('james','40','Mr','4.0','online')
-print default_user.name
+
